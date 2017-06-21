@@ -30,7 +30,7 @@ main(obj);
 //main function
 function main(obj){
 
-	var nightmare = Nightmare({show: false,
+	var nightmare = Nightmare({show: true,
 		switches : {
 			'proxy-server': obj.proxy
 		}
@@ -60,7 +60,7 @@ function main(obj){
 	        .click('#u_0_f')
 	        .evaluate(function(){
 	            //here is where I want to return the html body
-	            return document.body.innerHTML;
+	            return $('html').html();
 	        })
 	        .then(function(body){
 	        	print(body);
@@ -102,7 +102,7 @@ function main(obj){
 		yield nightmare 
 	        .evaluate(function(){
 	            //here is where I want to return the html body
-	            return document.body.innerHTML;
+	            return $('html').html();
 	        })
 	        .then(function(body){
 	        	print(body);
