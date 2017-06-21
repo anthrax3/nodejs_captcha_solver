@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_captcha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "captcha.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antigate": "0.0.1",
+    "cheerio": "^1.0.0-rc.1",
+    "electron": "^1.6.11",
+    "fs": "0.0.1-security",
+    "nightmare": "^2.10.0",
+    "nightmare-screenshot-selector": "^1.0.2",
+    "node-uuid": "^1.4.8",
+    "request": "^2.81.0",
+    "vo": "^4.0.2"
+  }
+}
