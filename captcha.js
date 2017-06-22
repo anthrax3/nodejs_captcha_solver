@@ -55,12 +55,14 @@ function main(obj){
 	}
 	var handle_captcha = function * (text) {
 	    var handle_captcha_code = text;
+	    console.log(handle_captcha_code);
 	    yield nightmare 
-	        .insert('#captcha_response', handle_captcha_code)
-	        .click('#u_0_f')
+	        .type('#captcha_response', handle_captcha_code)
+	        .click('#captcha_submit input')
+	        .wait('#all_search_results')
 	        .evaluate(function(){
 	            //here is where I want to return the html body
-	            return $('html').html();
+	            return document.body.innerHTML
 	        })
 	        .then(function(body){
 	        	print(body);
